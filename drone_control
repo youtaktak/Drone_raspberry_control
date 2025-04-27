@@ -171,3 +171,12 @@ class Drone:
         else:
             self.pi.stop()
             exit()
+if __name__ == "__main__":
+    drone = Drone()
+
+    print("Press keys to control the drone (w/s/a/d/e/q/r/f/z/x/c/v/l)")
+    print("Press any other key to exit.")
+
+    while True:
+        key = getch.getch()
+        drone.control(key)
